@@ -1,0 +1,221 @@
+:root{
+    --wheel_speed: 3s;
+    --gear_speed: 4s;
+}
+*{
+    float: left;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #d6a7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.bicycle{
+    width: 230px;
+    height: 230px;
+    position: relative;
+    animation-name: bicycle;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+.wheel{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    box-shadow: 0 0 0 10px black inset,
+                0 0 0 13px #969696 inset,
+                0 0 0 25px #d6a7ff inset,
+                0 0 0 30px #969696 inset,
+                0 0 0 35px black inset;
+    border: 2px dotted #575757;
+    animation-name: wheel;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--wheel_speed);
+}
+#behind-wheel{
+    top: 80px;
+    left: 0;
+}
+#front-wheel{
+    top: 80px;
+    right: 0;
+}
+.line{
+    background:linear-gradient(#2152ff, #b2bfff);
+    border-radius: 30px;
+    position: absolute;
+}
+#back-line{
+    width: 5px;
+    height: 65px;
+    top: 63px;
+    left: 56px;
+    transform: rotate(45deg);
+}
+#bottom-line{
+    width: 5px;
+    height: 70px;
+    top: 87px;
+    left: 67px;
+    transform: rotate(-80deg);
+}
+#right-line{
+    width: 6px;
+    height: 100px;
+    top: 48px;
+    left: 137px;
+    transform: rotate(50deg);
+}
+#front-line{
+    width: 6px;
+    height: 85px;
+    top: 36px;
+    right: 46px;
+    transform: rotate(-18deg);
+}
+#top-line{
+    width: 5px;
+    height: 100px;
+    top: 15px;
+    right: 101px;
+    transform: rotate(80deg);
+}
+#center-line{
+    width: 5px;
+    height: 80px;
+    top: 54px;
+    left: 87px;
+    transform: rotate(-26deg);
+}
+#handel-line{
+    width: 6px;
+    height: 30px;
+    top: 24px;
+    right: 55px;
+    transform: rotate(70deg);
+    background: linear-gradient(#2152ff, #000000);
+}
+#sit-line{
+    width: 6px;
+    height: 25px;
+    top: 45px;
+    left: 70px;
+    transform: rotate(90deg);
+    background: linear-gradient(#2152ff, #000000);
+}
+.gear{
+    top: 114px;
+    left: 91px;
+    position: absolute;
+    animation-name: wheel;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--gear_speed);
+}
+.gear-c{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+    box-shadow: 0 0 0 5px black inset,
+    0 0 0 3px #969696 inset,
+    0 0 0 5px #d6a7ff inset,
+    0 0 0 7px #969696 inset,
+    0 0 13px 6px black inset;
+    border: 2px dotted black;
+}
+#front-pedal
+{
+    width: 5px;
+    height: 23px;
+    top: -6px;
+    left: 12px;
+    background:linear-gradient(#2152ff, #b2bfff);
+    border-radius: 30px;
+    position: absolute;
+}
+#behind-pedal{
+    width: 5px;
+    height: 23px;
+    top: 13px;
+    left: 12px;
+    background:linear-gradient(#b2bfff,#2152ff);
+    border-radius: 30px;
+    position: absolute;
+    z-index: -1;
+}
+#front-pedal-h{
+    width: 15px;
+    height: 5px;
+    top: -8px;
+    left: 7.5px;
+    background:linear-gradient(#2152ff, #02165b);
+    border-radius: 30px;
+    position: absolute;
+    animation-name: h;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--gear_speed);
+}
+#behind-pedal-h{
+    width: 15px;
+    height: 5px;
+    top: 32px;
+    left: 7.5px;
+    background:linear-gradient(#2152ff, #02165b);
+    border-radius: 30px;
+    position: absolute;
+    z-index: -2;
+    animation-name: h;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--gear_speed);
+}
+.behind{
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+@keyframes wheel {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes bicycle {
+    0%{
+        transform: translateX(-40vw);
+    }
+    100%{
+        transform: translateX(40vw);
+    }
+}
+@keyframes h {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
