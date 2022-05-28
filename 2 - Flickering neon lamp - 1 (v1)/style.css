@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: white;
+    border: 0;
+    outline: 0;
+    font-family: sans-serif;
+}
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.button1{
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: #3b0750;
+    border-radius: .4rem;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+.button1:hover{
+    transition: all .3s ease-in-out;
+}
+.button1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 0 2px #ffffff inset,
+    0 0 5px 4px #ba13ff inset,
+    0 0 7px 1px #ba13ff;
+    box-sizing: border-box;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+}
+.button1:hover::before{
+    transition: all .3s ease-in-out;
+    transform: scale(1.2,1.3) rotate(5deg);
+    animation-name: light;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+    animation-duration: 5s;
+}
+
+
+@keyframes light {
+    0%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    1%{
+        box-shadow: unset;
+    }
+    2%{
+        box-shadow: unset;
+    }
+    3%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    20%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    21%{
+        box-shadow: unset;
+    }
+    22%{
+        box-shadow: unset;
+    }
+    23%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    70%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    71%{
+        box-shadow: unset;
+    }
+    72%{
+        box-shadow: unset;
+    }
+    73%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+    100%{
+        box-shadow: 0 0 0 2px #ffffff inset,
+        0 0 20px 5px #ba13ff inset,
+        0 0 10px 3px #ba13ff;
+    }
+}
