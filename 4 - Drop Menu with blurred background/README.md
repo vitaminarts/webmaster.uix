@@ -1,4 +1,4 @@
-# Drop Menu with blurrred background
+# Drop Menu with blurred background
 **Drop Menu with blurred background** Only using **HTML & CSS**
 
 I hope you like it ^.^
