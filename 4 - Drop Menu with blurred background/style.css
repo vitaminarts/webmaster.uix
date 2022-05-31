@@ -1,0 +1,159 @@
+*{
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    position: absolute;
+}
+.menu{
+    width: 20rem;
+    position: absolute;
+    z-index: 1;
+}
+.menu > span{
+    background: linear-gradient(60deg,#01dbc5,#4474bf,#a200b0 70%);
+    padding: 1.5rem;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    background-size: 150% 100%;
+}
+.menu:hover span{
+    display: block;
+    background-size: 100% 100%;
+    text-shadow: 0 5px 5px #000000;
+    margin-bottom: 1rem;
+}
+.menu ul{
+    list-style: none;
+    width: 100%;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px 1px #969696;
+    display: none;
+    opacity: 0;
+}
+.menu:hover ul{
+    opacity: 1;
+    display: block;
+}
+.menu ul::before{
+    content: "";
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #01dbc5;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    animation-name: before;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.menu ul::after{
+    content: "";
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #a200b0;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    animation-name: after;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.menu ul > li{
+    width: 100%;
+}
+.menu ul > li > a{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    backdrop-filter: blur(30px);
+    background-color: rgba(0,0,0,.01);
+    color: #000;
+}
+.menu ul > li > a:hover{
+    background: linear-gradient(60deg,rgba(1,219,197,.3),rgba(162,0,176,.3)) ;
+}
+
+
+
+
+@keyframes before {
+    0%{
+        left: 0;
+        top: 0;
+    }
+    20%{
+        left: 100%;
+        top: 3%;
+    }
+    40%{
+        left: 10%;
+        top: 10%;
+    }
+    60%{
+        left: 70%;
+        top: 60%;
+    }
+    80%{
+        left: -7%;
+        top: 70%;
+    }
+    90%{
+        left: calc(100% + 7rem);
+        top: calc(100% + 7rem);
+    }
+    0%{
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes after {
+    0%{
+        right: 0;
+        bottom: 0;
+    }
+    20%{
+        right: 100%;
+        bottom: 3%;
+    }
+    40%{
+        right: 10%;
+        bottom: 10%;
+    }
+    60%{
+        right: 70%;
+        bottom: 60%;
+    }
+    80%{
+        right: -7%;
+        bottom: 70%;
+    }
+    90%{
+        right: calc(100% + 7rem);
+        bottom: calc(100% + 7rem);
+    }
+    100%{
+        right: 0;
+        bottom: 0;
+    }
+}
