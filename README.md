@@ -10,5 +10,5 @@ Here, you will find many useful (HTML, CSS, JS, PHP) sources that I create for y
   # 3) Pink bunny button - 1 (Only HTML & CSS)
   <img src="https://github.com/vitaminarts/webmaster.uix/blob/main/3%20-%20Pink%20bunny%20button%20-%201%20(v1)/preview.gif">
   
-  # 4) Drop Menu with blur background (Only HTML & CSS)
-  <img src="https://github.com/vitaminarts/webmaster.uix/blob/main/4%20-%20Drop%20Menu%20with%20blur%20background/preview.gif">
+  # 4) Drop Menu with blurred background (Only HTML & CSS)
+  <img src="https://github.com/vitaminarts/webmaster.uix/blob/main/4%20-%20Drop%20Menu%20with%20blurred%20background/preview.gif">
