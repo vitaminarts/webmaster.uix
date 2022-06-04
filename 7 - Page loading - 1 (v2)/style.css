@@ -1,0 +1,144 @@
+*{
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.loading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes{
+    position: relative;
+}
+.boxes span{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #b000ff;
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.1,.7,.3,.1);
+}
+.boxes span::before{
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    animation-name: rotation_r;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.1,.7,.3,.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 5px 1px #b000ff;
+}
+.boxes span:nth-child(1){
+    transition: all 2s ease-in-out;
+    transform-origin: top left;
+    left: calc(50% - 5.5rem);
+    top: calc(50% - 5.5rem);
+}
+.boxes span:nth-child(1)::before{
+    transform-origin: top left;
+}
+.boxes span:nth-child(2){
+    transition: all 2s ease-in-out;
+    transform-origin: top center;
+    left: calc(50% - 1.5rem);
+    top: calc(50% - 5.5rem);
+}
+.boxes span:nth-child(2)::before{
+    transform-origin: top center;
+}
+.boxes span:nth-child(3){
+    transition: all 2s ease-in-out;
+    transform-origin: top right;
+    left: calc(50% + 2.5rem);
+    top: calc(50% - 5.5rem);
+}
+.boxes span:nth-child(3)::before{
+    transform-origin: top right;
+}
+.boxes span:nth-child(4){
+    transition: all 2s ease-in-out;
+    transform-origin: left center;
+    left: calc(50% - 5.5rem);
+    top: calc(50% - 1.5rem);
+}
+.boxes span:nth-child(4)::before{
+    transform-origin: left center;
+}
+.boxes span:nth-child(5){
+    transition: all 2s ease-in-out;
+    transform-origin: center center;
+    left: calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+}
+.boxes span:nth-child(5)::before{
+    transform-origin: center center;
+}
+.boxes span:nth-child(6){
+    transition: all 2s ease-in-out;
+    transform-origin: right center;
+    left: calc(50% + 2.5rem);
+    top: calc(50% - 1.5rem);
+}
+.boxes span:nth-child(6)::before{
+    transform-origin: right center;
+}
+.boxes span:nth-child(7){
+    transition: all 2s ease-in-out;
+    transform-origin: bottom left;
+    left: calc(50% - 5.5rem);
+    top: calc(50% + 2.5rem);
+}
+.boxes span:nth-child(7)::before{
+    transform-origin: bottom left;
+}
+.boxes span:nth-child(8){
+    transition: all 2s ease-in-out;
+    transform-origin: bottom center;
+    left: calc(50% - 1.5rem);
+    top: calc(50% + 2.5rem);
+}
+.boxes span:nth-child(8)::before{
+    transform-origin: bottom center;
+}
+.boxes span:nth-child(9){
+    transition: all 2s ease-in-out;
+    transform-origin: bottom right;
+    left: calc(50% + 2.5rem);
+    top: calc(50% + 2.5rem);
+}
+.boxes span:nth-child(9)::before{
+    transform-origin: bottom right;
+}
+
+
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotation_r{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-720deg);
+    }
+}
