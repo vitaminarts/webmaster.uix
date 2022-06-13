@@ -1,4 +1,4 @@
-# Page loading - 1 (v2)
+# Page loading - 2 (v1)
 **Page loading** Only using **HTML & CSS**
 
 I hope you like it ^.^
