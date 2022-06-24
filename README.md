@@ -11,3 +11,6 @@ Here, you will find many useful (HTML, CSS, JS, PHP) sources that I create for y
   # 8) Page loading - 2 (v1)
   # 9) Camera animation - 1 (v1)
   # 10) 3D button - 1 (v1)
+  # 11) Page loading - 3 (v1)
+  # 12) Page loading - 3 (v2)
+  # 13) Card hover - 1 (v1)
