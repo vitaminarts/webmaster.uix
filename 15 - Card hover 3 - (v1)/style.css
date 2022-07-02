@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family : sans-serif;
+    text-decoration : none;
+    float:left;
+    color:#000;
+}
+body{
+    width: 100%;
+    background: #3552aa;
+}
+.article{
+    width : 20rem;
+    margin : 1rem;
+    border-radius: 1rem;
+}
+.picture{
+    width: 100%;
+}
+.picture img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+.post{
+    width : 100%;
+    border-radius: 0 0 1rem 1rem;
+    transition: all .5s ease-in-out;
+    position: relative;
+    height: 16.6rem;
+}
+.perspective{
+    perspective: 400px;
+}
+.contents{
+    width: 100%;
+    padding: 1rem;
+    transform-origin: top;
+    transform: rotateX(255deg);
+    opacity: 0;
+    background: #fff;
+    transition: all .3s ease-in-out;
+}
+.article:hover .contents{
+    transform: rotateX(360deg);
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.date{
+    width: 100%;
+    font-size: .85rem;
+    color: #00a20f;
+    text-align: center;
+    font-weight: bold;
+    height: 1rem;
+}
+.contents > h3{
+    width: 100%;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.contents > p{
+    width: 100%;
+    font-size: .8rem;
+    color: #727272;
+    margin-bottom: 1rem;
+    height: 6.4rem;
+    text-align: center;
+}
+.post > ul{
+    list-style: none;
+    width: 100%;
+    background-color: #00a20f;
+    border-radius: 0 0 1rem 1rem;
+    transform: translateY(-13.3rem);
+    transition: all .3s ease-in-out;
+}
+.article:hover .post > ul{
+    transform: translateY(0);
+    transition: all .2s ease-in-out;
+}
+.post > ul > li{
+    width: calc(100% / 3);
+    padding: 1rem 0;
+}
+.post > ul > li > span{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.post > ul > li > span:nth-child(1){
+    font-weight: bold;
+    opacity: .9;
+}
+.post > ul > li > span:nth-child(2){
+    font-size: .6rem;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+.orange .date{
+    color: #ff5900;
+}
+.orange .post > ul{
+    background-color: #ff5900;
+}
+
+.darkpink .date{
+    color: #ff00a9;
+}
+.darkpink .post > ul{
+    background-color: #ff00a9;
+}
