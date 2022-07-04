@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: white;
+    border: 0;
+    outline: 0;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+}
+.floating{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+.buttons{
+    position: relative;
+}
+.buttons > button{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: .75rem;
+    bottom: .75rem;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    perspective: 400px;
+}
+.buttons > button > img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #00a20f;
+    filter:invert(47%) sepia(45%) saturate(120) hue-rotate(174deg);
+}
+.fmain{
+    width: 4rem!important;
+    height: 4rem!important;
+    right: 1rem!important;
+}
+.fmain > img{
+    width: 2rem!important;
+    height: 2rem!important;
+    padding: 1rem!important;
+    border-radius: 50%;
+}
+.floating:hover .buttons > button{
+    transform: translateY(calc(var(--i) * -4rem));
+    transition: all .3s ease-in-out;
+}
+.floating:hover .buttons > button:last-child{
+    transform: rotate(225deg);
+}
+.buttons > button > img:hover{
+    background-color: #02750c;
+    transform: scale(1.05);
+    transition: all .3s;
+}
+.buttons > button > img:hover + span{
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    transform: rotateY(0deg) rotateZ(-15deg);
+}
+.floating:hover .fmain > img{
+    background-color: #02750c!important;
+}
+.buttons > button > span{
+    position: absolute;
+    right: 2.5rem;
+    bottom: .25rem;
+    padding: 1.25rem 2.5rem 1.25rem 2rem;
+    background-color: #a4d8ff;
+    border-radius: 5rem 0 0 5rem;
+    z-index: -1;
+    color: #00659f;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    transform: rotateY(-90deg) rotateZ(0deg);
+    transform-origin: right;
+    opacity: 0;
+    white-space: nowrap;
+}
