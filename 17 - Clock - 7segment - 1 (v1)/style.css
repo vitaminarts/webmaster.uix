@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "7seg";
+    src: url("7segment.woff");
+}
+*{
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    position: absolute;
+}
+.clock{
+    margin: 0 3rem;
+}
+.digit{
+    position: relative;
+    perspective: 1000px;
+    width: 11rem;
+    height: 11rem;
+    margin: 11rem .5rem 1rem .5rem;
+}
+.digit > span{
+    width: 100%;
+    height: 100%;
+    font-size: 9rem;
+    background-color: transparent;
+    border-radius: .7rem;
+    position: absolute;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "7seg";
+}
+.digit > span::before{
+    content: "8";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font-size: 9rem;
+    background-color: #00b5e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0098be;
+    border-radius: .7rem;
+}
+.next{
+    animation-name: next;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.dot{
+    margin-top: 11rem;
+    height: 11rem;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #00b5e2;
+}
