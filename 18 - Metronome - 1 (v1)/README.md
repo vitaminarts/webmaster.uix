@@ -2,5 +2,5 @@
 **Metronome** using **HTML & CSS & JavaScript**
 
 I hope you like it ^.^
-![alt text](https://github.com/vitaminarts/webmaster.uix/blob/main/17%20-%20Clock%20-%207segment%20-%201%20(v1)/preview.gif "Metronome")
+![alt text](https://github.com/vitaminarts/webmaster.uix/blob/main/18%20-%20Metronome%20-%201%20(v1)/preview.jpg "Metronome")
 
