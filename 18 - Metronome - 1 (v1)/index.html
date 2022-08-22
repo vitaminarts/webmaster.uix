@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="icofont/icofont.min.css" type="text/css" rel="stylesheet">
+    <script src="metronome.js" rel="script" type="application/javascript"></script>
+</head>
+<body>
+<div class="metronome">
+    <div class="row py-2">
+        <div class="timeBtnArea">
+            <button class="timeBtn" onclick="decrease()">-</button>
+        </div>
+        <span class="time" id="time">60</span>
+        <div class="timeBtnArea">
+            <button class="timeBtn" onclick="increase()">+</button>
+        </div>
+    </div>
+    <div class="row flex justify-content-center">
+        <input id="range" value="60" type="range" min="15" max="500" oninput="range(this.value)" onchange="range(this.value)">
+    </div>
+    <div class="row py-2 flex justify-content-center align-items-center">
+        <button id="play" onclick="metronome()"><i class="icofont-play-alt-1"></i></button>
+    </div>
+    <div class="row py-2 flex justify-content-space-evenly">
+        <button class="timeBtn" onclick="changePPS(this)">1</button>
+        <button class="timeBtn" onclick="changePPS(this)">2</button>
+        <button class="timeBtn" onclick="changePPS(this)">3</button>
+        <button class="timeBtn selected" onclick="changePPS(this)">4</button>
+    </div>
+</div>
+</body>
+</html>

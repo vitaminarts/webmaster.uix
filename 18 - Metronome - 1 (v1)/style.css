@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    float: left;
+    font-family: sans-serif;
+    outline: none;
+}
+body{
+    background-color: #313131;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+.metronome{
+    width: 30%;
+    background-color: #d7d7d7;
+    border-radius: 1rem;
+}
+.row{
+    width: 100%;
+}
+.py-1{
+    padding: 1rem 0;
+}
+.py-2{
+    padding: 2rem 0;
+}
+.timeBtnArea{
+    width: 30%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeBtn{
+    border: 0;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: -3px -3px 5px 0 #f6f6f6,
+    3px 3px 5px 0 #747474;
+}
+.timeBtn:active,.timeBtn.selected{
+    background-color: #ececec;
+    box-shadow: -3px -3px 10px 0 #fff inset,
+    3px 3px 5px 0 #545454 inset;
+}
+.time{
+    width: 40%;
+    text-align: center;
+    font-size: 4rem;
+}
+#range{
+    width: 80%;
+}
+.flex{
+    display: flex;
+}
+.flex.justify-content-center{
+    justify-content: center;
+}
+.flex.align-items-center{
+    align-items: center;
+}
+.flex.justify-content-space-evenly{
+    justify-content: space-evenly;
+}
+#play{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 0;
+}
+#play > i::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+}
+.befor-color-blue::before{
+    color: #0075ff;
+}
