@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webmaster.uix (Creative Submit button)</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="password.js" type="application/javascript" rel="script"></script>
+    <!--
+    Creator : Vahid Taheri
+    Instagram : @webmaster.uix
+    github : https://github.com/vitaminarts/webmaster.uix
+    -->
+</head>
+<body>
+<div class="form">
+    <h1>Login</h1>
+    <form>
+        <div>
+            <label>Email</label>
+            <input name="email" type="text" id="email" placeholder="example@domain.com">
+        </div>
+        <div>
+            <label>Password</label>
+            <input name="password" type="text" id="password" placeholder="more than 6 characters" onkeyup="checkpassword(this)">
+        </div>
+        <div id="error">
+            <h2 id="errorText">Check your password again !-_-!</h2>
+        </div>
+        <div>
+            <div class="button">
+                <button id="submit" type="submit" disabled>Submit</button>
+                <div id="tempdiv" onmouseover="movebutton(this)"></div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
